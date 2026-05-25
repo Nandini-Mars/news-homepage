@@ -9,3 +9,17 @@ menuButton.addEventListener("click", () => {
 menuClose.addEventListener("click", () => {
   nav.classList.remove("open");
 });
+
+const heroImage = document.getElementById("hero-image");
+
+function updateHeroImage() {
+  if (window.innerWidth < 1000) {
+    heroImage.src = "image-web-3-mobile.jpg";
+  } else {
+    heroImage.src = "image-web-3-desktop.jpg";
+  }
+}
+
+updateHeroImage();
+
+window.addEventListener("resize", updateHeroImage);
